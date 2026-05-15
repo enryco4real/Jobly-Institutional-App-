@@ -13,6 +13,8 @@ class LoginMain : AppCompatActivity() {
     private lateinit var etPassword: TextInputEditText
     private lateinit var btnLogin: MaterialButton
 
+    private lateinit var btnGoogle: MaterialButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_main)
@@ -20,6 +22,7 @@ class LoginMain : AppCompatActivity() {
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        btnGoogle = findViewById(R.id.btnGoogle)
 
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
@@ -41,6 +44,10 @@ class LoginMain : AppCompatActivity() {
             }
 
             Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
+        }
+
+        btnGoogle.setOnClickListener {
+            Toast.makeText(this, "teste", Toast.LENGTH_SHORT).show()
         }
     }
 }
