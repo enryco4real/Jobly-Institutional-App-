@@ -5,7 +5,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
-
+import android.util.Patterns
 class MainActivity : AppCompatActivity() {
 
     private lateinit var etEmail: TextInputEditText
@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
             if (email.isEmpty()) {
                 etEmail.error = "Preencha o e-mail"
+                return@setOnClickListener
+            }
+
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                etEmail.error = "Digite um e-mail válido."
                 return@setOnClickListener
             }
 
