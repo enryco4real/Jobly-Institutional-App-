@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppJobly">
         <activity
-            android:name=".loginmain"
+            android:name=".LoginMain"
             android:exported="true"
             android:theme="@style/Theme.AppJobly">
             <intent-filter>
