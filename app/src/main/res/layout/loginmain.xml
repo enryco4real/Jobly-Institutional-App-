@@ -74,16 +74,15 @@
             android:layout_marginBottom="32dp"
             android:padding="4dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/BtnSquare"
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:text="Entrar"
             android:textSize="16sp"
             android:layout_marginBottom="16dp"
-
             android:backgroundTint="#003C85"
-
             android:insetTop="0dp"
             android:insetBottom="0dp"
             app:cornerRadius="0dp" />

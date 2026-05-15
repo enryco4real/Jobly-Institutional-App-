@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.AppJobly" parent="Base.Theme.AppJobly" />
+
+    <style name="BtnSquare" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
 </resources>
