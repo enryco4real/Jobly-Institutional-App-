@@ -1,20 +1,21 @@
 package com.example.appjobly
 
 import android.os.Bundle
-import android.widget.Button
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
-import android.util.Patterns
+
 class LoginMain : AppCompatActivity() {
 
     private lateinit var etEmail: TextInputEditText
     private lateinit var etPassword: TextInputEditText
-    private lateinit var btnLogin: Button
+    private lateinit var btnLogin: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.`loginmain.xml`)
+        setContentView(R.layout.login_main)
 
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
@@ -29,7 +30,7 @@ class LoginMain : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 etEmail.error = "Digite um e-mail válido."
                 return@setOnClickListener
             }
